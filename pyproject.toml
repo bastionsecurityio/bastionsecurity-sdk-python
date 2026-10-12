@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bastionsecurity"
+version = "0.1.0"
+description = "Bastion Security Python SDK — real-time bot detection and fraud prevention"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+dependencies = ["httpx>=0.24"]
+authors = [{ name = "Bastion Security" }]
+
+[project.urls]
+Homepage = "https://bastionsecurity.io"
+Repository = "https://github.com/bastionsecurityio/sdk-python"
