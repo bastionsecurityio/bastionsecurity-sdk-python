@@ -3,7 +3,7 @@
 
 Collect telemetry in the browser, verify on your server, and enforce the result before completing checkout.
 
-Source: [site documentation](https://web-production-c0739.up.railway.app/docs/quickstart) · platform revision `4b7879729687067d55fe230a0503385b205c0018`.
+Source: [site documentation](https://bastionsecurity.io/docs/quickstart) · platform revision `44c75b5c6715fb9a30b07e2c3ee319e0ac0810b2`.
 
 <a id="create-a-site"></a>
 
@@ -14,11 +14,15 @@ Source: [site documentation](https://web-production-c0739.up.railway.app/docs/qu
 3. Allowlist each frontend origin, including the exact scheme and port. Development http://localhost:3000 and production https://shop.example.com are different origins.
 4. Start in monitor mode while reviewing your traffic, then choose block or challenge when you are ready to enforce.
 
+> **The public demo is read-only**
+>
+> Create your own workspace to run SDK requests and configure integrations. The shared demo keeps sample data available for browsing and analyst questions. Team access, settings, keys, rules, billing, webhooks, SSO changes, and event writes are disabled.
+
 > **Monitor mode approves traffic**
 >
 > A new site defaults to monitor. Its action is allow even when the score is high. Switch enforcement mode deliberately after validating the integration.
 
-- [Open Integration](https://web-production-c0739.up.railway.app/dashboard/integration) — Find your site keys and run the connection test.
+- [Open Integration](https://bastionsecurity.io/dashboard/integration) — Find your site keys and run the connection test.
 
 <a id="install"></a>
 
@@ -78,7 +82,7 @@ import Bastion from '@bastionsecurity/sdk';
 
 const bastion = new Bastion({
   siteKey: 'YOUR_PUBLIC_SITE_KEY',
-  endpoint: 'https://api-production-761a5.up.railway.app/api/antibot',
+  endpoint: 'https://api.bastionsecurity.io/api/antibot',
 });
 
 // Run after the customer has interacted with the page.
@@ -113,7 +117,7 @@ import type { VerificationRequest } from '@bastionsecurity/sdk';
 const bastion = new ServerBastion({
   siteKey: process.env.BASTION_SITE_KEY!,
   secret: process.env.BASTION_SECRET_KEY!,
-  endpoint: process.env.BASTION_ENDPOINT || 'https://api-production-761a5.up.railway.app/api/antibot',
+  endpoint: process.env.BASTION_ENDPOINT || 'https://api.bastionsecurity.io/api/antibot',
 });
 
 // Call from your authenticated checkout handler. These values must

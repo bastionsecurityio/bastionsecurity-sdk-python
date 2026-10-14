@@ -10,7 +10,7 @@ from typing import Any, Dict, Optional, Union
 
 import httpx
 
-DEFAULT_ENDPOINT = "https://api-production-761a5.up.railway.app/api/antibot"
+DEFAULT_ENDPOINT = "https://api.bastionsecurity.io/api/antibot"
 
 
 class BastionError(RuntimeError):

@@ -3,7 +3,7 @@
 
 Collect fingerprint, environment, and interaction telemetry in JavaScript applications without exposing a server secret.
 
-Source: [site documentation](https://web-production-c0739.up.railway.app/docs/browser-sdk) · platform revision `4b7879729687067d55fe230a0503385b205c0018`.
+Source: [site documentation](https://bastionsecurity.io/docs/browser-sdk) · platform revision `44c75b5c6715fb9a30b07e2c3ee319e0ac0810b2`.
 
 <a id="package"></a>
 
@@ -22,7 +22,7 @@ import Bastion from '@bastionsecurity/sdk';
 
 const bastion = new Bastion({
   siteKey: 'YOUR_PUBLIC_SITE_KEY',
-  endpoint: 'https://api-production-761a5.up.railway.app/api/antibot',
+  endpoint: 'https://api.bastionsecurity.io/api/antibot',
 });
 
 // Run after the customer has interacted with the page.
@@ -51,11 +51,11 @@ For Next.js, initialize in a client component or effect after mount. Do not inst
 **html**
 
 ```html
-<script src="https://web-production-c0739.up.railway.app/sdk/bastion.js"></script>
+<script src="https://bastionsecurity.io/sdk/bastion.js"></script>
 <script>
   const bastion = new BastionSDK.Bastion({
     siteKey: 'YOUR_PUBLIC_SITE_KEY',
-    endpoint: 'https://api-production-761a5.up.railway.app/api/antibot',
+    endpoint: 'https://api.bastionsecurity.io/api/antibot',
   });
   // Call bastion.buildRequest(...) from your checkout handler.
 </script>
@@ -101,7 +101,7 @@ track accepts camelCase accountId, paymentHash, promoCode, and amount. The API c
 | Option | Default / meaning |
 | --- | --- |
 | siteKey | Required public key for the selected site. |
-| endpoint | https://api-production-761a5.up.railway.app/api/antibot |
+| endpoint | https://api.bastionsecurity.io/api/antibot |
 | monitorOnInit | true; collect interactions immediately. |
 | timeout | 15,000 ms; bounded between 1,000 and 30,000 ms. |
 | retries | 2 retries; maximum 3. Eligible network, 429, and 5xx failures only. |

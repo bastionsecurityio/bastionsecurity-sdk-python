@@ -3,13 +3,13 @@
 
 HTTP routes, request fields, decision schemas, response envelopes, and body limits.
 
-Source: [site documentation](https://web-production-c0739.up.railway.app/docs/api-reference) · platform revision `4b7879729687067d55fe230a0503385b205c0018`.
+Source: [site documentation](https://bastionsecurity.io/docs/api-reference) · platform revision `44c75b5c6715fb9a30b07e2c3ee319e0ac0810b2`.
 
 <a id="routes"></a>
 
 ## Data plane routes
 
-All paths below are relative to https://api-production-761a5.up.railway.app/api/antibot. Requests use JSON. Server endpoints require both X-Site-Key and X-Secret-Key; browser endpoints use X-Site-Key and an allowlisted Origin.
+All paths below are relative to https://api.bastionsecurity.io/api/antibot. Requests use JSON. Server endpoints require both X-Site-Key and X-Secret-Key; browser endpoints use X-Site-Key and an allowlisted Origin.
 
 | Method / path | Authentication | Body / result |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ All paths below are relative to https://api-production-761a5.up.railway.app/api/
 **bash**
 
 ```bash
-curl -X POST 'https://api-production-761a5.up.railway.app/api/antibot/verify' \
+curl -X POST 'https://api.bastionsecurity.io/api/antibot/verify' \
   -H "X-Site-Key: $BASTION_SITE_KEY" \
   -H "X-Secret-Key: $BASTION_SECRET_KEY" \
   -H 'Content-Type: application/json' \

@@ -1,6 +1,6 @@
 # Developer setup guides
 
-These guides and code blocks are generated from the website's developer documentation at platform revision `4b7879729687067d55fe230a0503385b205c0018`. The language-specific runnable entry point is [examples/README.md](../examples/README.md).
+These guides and code blocks are generated from the website's developer documentation at platform revision `44c75b5c6715fb9a30b07e2c3ee319e0ac0810b2`. The language-specific runnable entry point is [examples/README.md](../examples/README.md).
 
 - [Build with Bastion.](overview.md) — Developer guides for connecting your application to fraud scoring, bot protection, signed webhooks, and workspace SSO.
 - [Your first integration](quickstart.md) — Collect telemetry in the browser, verify on your server, and enforce the result before completing checkout.

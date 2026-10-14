@@ -5,7 +5,7 @@ def verify_request(request):
     with BastionClient(
         site_key=os.environ["BASTION_SITE_KEY"],
         secret=os.environ["BASTION_SECRET_KEY"],
-        endpoint=os.environ.get("BASTION_ENDPOINT", "https://api-production-761a5.up.railway.app/api/antibot"),
+        endpoint=os.environ.get("BASTION_ENDPOINT", "https://api.bastionsecurity.io/api/antibot"),
     ) as client:
         decision = client.verify(request)
         return {"allowed": decision["action"] == "allow", "decision": decision}

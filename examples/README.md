@@ -5,14 +5,14 @@ These programs call the real SDK and API. Run commands from the repository root 
 ## Configure a site and your environment
 
 1. Follow [site setup](../docs/quickstart.md) and [authentication](../docs/authentication.md). Copy the public site key and server secret from Integration. Allowlist the exact frontend origin, including scheme and port.
-2. Set `BASTION_SITE_KEY`, `BASTION_SECRET_KEY`, and optionally `BASTION_ENDPOINT` in your **server** environment. The endpoint defaults to `https://api-production-761a5.up.railway.app/api/antibot`. [`.env.example`](.env.example) lists the variables; the native CLI does not automatically load dotenv files.
+2. Set `BASTION_SITE_KEY`, `BASTION_SECRET_KEY`, and optionally `BASTION_ENDPOINT` in your **server** environment. The endpoint defaults to `https://api.bastionsecurity.io/api/antibot`. [`.env.example`](.env.example) lists the variables; the native CLI does not automatically load dotenv files.
 3. Initialize the [browser SDK](../docs/browser-sdk.md) once before the customer interacts. Save the complete JSON returned by `buildRequest()` as `examples/browser-request.json` for this operator-driven CLI walkthrough. Tokens expire after ten minutes; collect a fresh request when needed. In your application, send the payload directly to your authenticated backend rather than writing customer files.
 4. Copy `examples/order.example.json` to `examples/order.json`. Replace it with trusted session/database/payment-provider values. This local operator-owned file supplies checkout context; never populate it from client claims or raw card credentials.
 
 ```sh
 export BASTION_SITE_KEY='YOUR_PUBLIC_SITE_KEY'
 export BASTION_SECRET_KEY='YOUR_SERVER_SECRET'
-export BASTION_ENDPOINT='https://api-production-761a5.up.railway.app/api/antibot'
+export BASTION_ENDPOINT='https://api.bastionsecurity.io/api/antibot'
 python examples/cli.py verify examples/browser-request.json examples/order.json
 ```
 

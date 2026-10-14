@@ -3,7 +3,7 @@
 
 Design integrations around enforced tenant entitlements, monthly decision caps, and retention windows.
 
-Source: [site documentation](https://web-production-c0739.up.railway.app/docs/plans-and-limits) · platform revision `4b7879729687067d55fe230a0503385b205c0018`.
+Source: [site documentation](https://bastionsecurity.io/docs/plans-and-limits) · platform revision `44c75b5c6715fb9a30b07e2c3ee319e0ac0810b2`.
 
 <a id="catalog"></a>
 
@@ -35,8 +35,8 @@ A quota exhaustion response is 429. Site capacity and unavailable features retur
 
 Eligible tenants can start a one-time 14-day Pro trial in Billing. Trial access does not require a Stripe checkout configuration. Paid checkout remains disabled when platform payment credentials are absent. Trial expiry reverts feature access according to the tenant’s effective subscription.
 
-- [Tenant billing](https://web-production-c0739.up.railway.app/dashboard/billing) — Inspect your current plan, trial eligibility, and usage.
-- [Public pricing](https://web-production-c0739.up.railway.app/pricing) — Compare the published plan list.
+- [Tenant billing](https://bastionsecurity.io/dashboard/billing) — Inspect your current plan, trial eligibility, and usage.
+- [Public pricing](https://bastionsecurity.io/pricing) — Compare the published plan list.
 
 <a id="retention"></a>
 

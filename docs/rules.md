@@ -3,7 +3,7 @@
 
 Express site-specific risk conditions with a bounded comparison grammar and plan-aware rule configuration.
 
-Source: [site documentation](https://web-production-c0739.up.railway.app/docs/rules) · platform revision `4b7879729687067d55fe230a0503385b205c0018`.
+Source: [site documentation](https://bastionsecurity.io/docs/rules) · platform revision `44c75b5c6715fb9a30b07e2c3ee319e0ac0810b2`.
 
 <a id="create"></a>
 

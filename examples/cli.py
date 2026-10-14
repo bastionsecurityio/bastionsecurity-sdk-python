@@ -41,7 +41,7 @@ def main():
         return {'verified': True, 'event': json.loads(raw)}, 0
     if mode not in ('verify', 'batch', 'challenge'):
         raise ValueError('Usage: verify telemetry.json order.json | batch requests.json | challenge | webhook raw-body.json signature.txt')
-    with BastionClient(required('BASTION_SITE_KEY'), required('BASTION_SECRET_KEY'), endpoint=os.environ.get('BASTION_ENDPOINT', 'https://api-production-761a5.up.railway.app/api/antibot')) as client:
+    with BastionClient(required('BASTION_SITE_KEY'), required('BASTION_SECRET_KEY'), endpoint=os.environ.get('BASTION_ENDPOINT', 'https://api.bastionsecurity.io/api/antibot')) as client:
         if mode == 'verify':
             if len(args) != 3:
                 raise ValueError('Usage: verify telemetry.json order.json')

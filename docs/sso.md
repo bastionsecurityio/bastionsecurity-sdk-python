@@ -3,7 +3,7 @@
 
 Connect your organization’s identity provider to the Bastion tenant workspace using SAML 2.0.
 
-Source: [site documentation](https://web-production-c0739.up.railway.app/docs/sso) · platform revision `4b7879729687067d55fe230a0503385b205c0018`.
+Source: [site documentation](https://bastionsecurity.io/docs/sso) · platform revision `44c75b5c6715fb9a30b07e2c3ee319e0ac0810b2`.
 
 <a id="scope"></a>
 
@@ -35,8 +35,8 @@ Enterprise SAML signs your team into its Bastion workspace. It does not authenti
 | idpIssuer | IdP entity ID, supplied to Bastion. |
 | certificate | IdP assertion-signing PEM X.509 certificate, supplied to Bastion. |
 
-- [Configure workspace SSO](https://web-production-c0739.up.railway.app/dashboard/sso) — Copy your actual site’s metadata and configure the IdP.
-- [Manage your team](https://web-production-c0739.up.railway.app/dashboard/settings) — Invite members before their first SAML sign-in.
+- [Configure workspace SSO](https://bastionsecurity.io/dashboard/sso) — Copy your actual site’s metadata and configure the IdP.
+- [Manage your team](https://bastionsecurity.io/dashboard/settings) — Invite members before their first SAML sign-in.
 
 <a id="configuration-api"></a>
 
@@ -45,7 +45,7 @@ Enterprise SAML signs your team into its Bastion workspace. It does not authenti
 **bash**
 
 ```bash
-curl 'https://api-production-761a5.up.railway.app/api/auth/sso/YOUR_SITE_ID/config' \
+curl 'https://api.bastionsecurity.io/api/auth/sso/YOUR_SITE_ID/config' \
   -H "Authorization: Bearer $BASTION_ACCESS_TOKEN"
 ```
 

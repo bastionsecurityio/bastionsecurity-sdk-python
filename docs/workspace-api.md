@@ -3,13 +3,13 @@
 
 Manage tenant sites, team membership, rules, and integrations with authenticated workspace requests.
 
-Source: [site documentation](https://web-production-c0739.up.railway.app/docs/workspace-api) · platform revision `4b7879729687067d55fe230a0503385b205c0018`.
+Source: [site documentation](https://bastionsecurity.io/docs/workspace-api) · platform revision `44c75b5c6715fb9a30b07e2c3ee319e0ac0810b2`.
 
 <a id="sites"></a>
 
 ## Sites & policy
 
-Management routes are relative to https://api-production-761a5.up.railway.app/api and use Authorization: Bearer <accessToken>. Responses use the standard success/data/timestamp envelope. Owners manage sites; team roles and SAML site scope restrict access.
+Management routes are relative to https://api.bastionsecurity.io/api and use Authorization: Bearer <accessToken>. Responses use the standard success/data/timestamp envelope. Owners manage sites; team roles and SAML site scope restrict access.
 
 | Route | Operation |
 | --- | --- |

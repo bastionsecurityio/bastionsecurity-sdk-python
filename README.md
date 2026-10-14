@@ -28,7 +28,7 @@ python -m pip install -e .
 - [Single-use proof challenges](docs/challenges.md)
 - [Signed webhooks and durable processing](docs/webhooks.md)
 - [Enterprise SAML setup](docs/sso.md)
-- [All developer guides](docs/README.md) · [live docs](https://web-production-c0739.up.railway.app/docs)
+- [All developer guides](docs/README.md) · [live docs](https://bastionsecurity.io/docs)
 
 The guides and the published verification function are generated from the same source as the website. The repository includes executable native Python examples and the website's complete Node.js/PostgreSQL webhook receiver and worker. The shared receiver needs Node.js 20+; native signature verification uses this SDK.
 

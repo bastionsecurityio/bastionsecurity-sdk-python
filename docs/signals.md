@@ -3,7 +3,7 @@
 
 Understand browser, behavioral, network, velocity, and identity evidence used in scoring and case investigation.
 
-Source: [site documentation](https://web-production-c0739.up.railway.app/docs/signals) · platform revision `4b7879729687067d55fe230a0503385b205c0018`.
+Source: [site documentation](https://bastionsecurity.io/docs/signals) · platform revision `44c75b5c6715fb9a30b07e2c3ee319e0ac0810b2`.
 
 <a id="families"></a>
 
@@ -57,5 +57,5 @@ The dashboard analyst uses account events, rule evidence, identity links, and th
 >
 > Shared IPs and devices can occur in legitimate households or networks. Behavioral absence can occur with short sessions or assistive tools. Review multiple observations and customer context; a 0–100 risk score is not a calibrated probability of fraud.
 
-- [Open Fraud Analyst](https://web-production-c0739.up.railway.app/dashboard/analyst) — Investigate tenant account evidence.
+- [Open Fraud Analyst](https://bastionsecurity.io/dashboard/analyst) — Investigate tenant account evidence.
 - [Decision policy](decisions.md) — Separate observations from enforcement.
