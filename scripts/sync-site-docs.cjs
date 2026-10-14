@@ -8,7 +8,7 @@ if (!platform) throw new Error('Usage: node scripts/sync-site-docs.cjs /path/to/
 const root = path.resolve(__dirname, '..');
 const source = path.resolve(platform);
 const {articles} = require(path.join(source, 'apps/api/test/docs-load.cjs'));
-const revision = execFileSync('git', ['-C', source, 'rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
+const revision = execFileSync('git', ['-C', source, 'log', '-1', '--format=%H', '--', 'apps/web/src/lib/docs', 'apps/web/examples/webhook-receiver'], {encoding: 'utf8'}).trim();
 const base = 'https://bastionsecurity.io';
 const href = value => value.startsWith('/docs') ? (value.replace(/^\/docs\/?/, '').split('#')[0] || 'overview') + '.md' + (value.includes('#') ? '#' + value.split('#')[1] : '') : value.startsWith('/') ? base + value : value;
 function block(b) {
