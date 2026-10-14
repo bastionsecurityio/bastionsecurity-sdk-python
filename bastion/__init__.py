@@ -1,4 +1,4 @@
-from .client import BastionClient
+from .client import BastionClient, BastionError, verify_webhook
 
-__all__ = ["BastionClient"]
-__version__ = "0.1.0"
+__all__ = ["BastionClient", "BastionError", "verify_webhook"]
+__version__ = "0.2.0"
