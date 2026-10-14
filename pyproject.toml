@@ -14,7 +14,7 @@ authors = [{ name = "Bastion Security" }]
 
 [project.urls]
 Homepage = "https://bastionsecurity.io"
-Repository = "https://github.com/bastionsecurityio/sdk-python"
+Repository = "https://github.com/bastionsecurityio/bastionsecurity-sdk-python"
 
 [tool.hatch.build.targets.wheel]
 packages = ["bastion"]

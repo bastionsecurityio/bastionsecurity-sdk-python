@@ -1,0 +1,7 @@
+{
+  "label": "Python",
+  "command": [
+    "python",
+    "examples/cli.py"
+  ]
+}

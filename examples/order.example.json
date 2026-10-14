@@ -1,0 +1,5 @@
+{
+  "customerId": "customer_123",
+  "amount": 49.99,
+  "paymentId": "payment_provider_reference_123"
+}

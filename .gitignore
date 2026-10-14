@@ -3,3 +3,15 @@ __pycache__/
 dist/
 *.egg-info/
 .venv/
+
+# Local example credentials, customer data, and installed dependencies.
+.env
+**/.env
+vendor/
+node_modules/
+*.gem
+examples/browser-request.json
+examples/order.json
+examples/batch.json
+examples/delivery.json
+examples/signature.txt
