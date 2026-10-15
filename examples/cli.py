@@ -46,12 +46,12 @@ def main():
             if len(args) != 3:
                 raise ValueError('Usage: verify telemetry.json order.json')
             telemetry, order = load(args[1]), load(args[2])
-            if not all(telemetry.get(k) for k in ('token', 'fingerprint', 'idempotency_key')):
+            if not telemetry.get('idempotency_key') or (not telemetry.get('browser_receipt') and not all(telemetry.get(k) for k in ('token', 'fingerprint'))):
                 raise ValueError('Complete buildRequest() telemetry with a stable idempotency_key is required')
             amount = order.get('amount')
             if not isinstance(order.get('customerId'), str) or not order['customerId'] or not isinstance(order.get('paymentId'), str) or not order['paymentId'] or isinstance(amount, bool) or not isinstance(amount, (int, float)) or not math.isfinite(amount) or amount < 0:
                 raise ValueError('Trusted order needs customerId, paymentId, and a finite nonnegative amount')
-            request = {k: telemetry[k] for k in ('token', 'fingerprint', 'behavior', 'environment', 'idempotency_key') if k in telemetry}
+            request = {k: telemetry[k] for k in ('browser_receipt', 'token', 'fingerprint', 'behavior', 'environment', 'idempotency_key') if k in telemetry}
             request['context'] = {'event_type': 'checkout', 'account_id': order['customerId'], 'order_amount': amount, 'payment_hash': order['paymentId']}
             decision = client.verify(request)
             return {'allowed': decision['action'] == 'allow', 'decision': decision}, 0
